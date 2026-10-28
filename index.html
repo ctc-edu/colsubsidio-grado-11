@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yo decido · Grado 11 · Crack the Code</title>
+<meta name="description" content="Investigación & Lanzamiento IA — Yo decido. Curso de Grado 11 de Crack the Code para Colsubsidio. Índice de materiales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0B16; --panel:#12121F; --panel2:#1A1A2E;
+    --ink:#FFFFFF; --muted:#C9CBE0; --dim:#8F92AD; --line:rgba(255,255,255,.1);
+    --orange:#E57B43; --orange-l:#FFAA7D; --violet:#AEA7F9; --teal:#6BE3D7; --blue:#1D5BBC;
+    --head:'Bricolage Grotesque',system-ui,sans-serif; --body:'Nunito Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  /* hero */
+  header{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  header .glow1,header .glow2{position:absolute;pointer-events:none}
+  header .glow1{left:-10%;top:-40%;width:60%;height:140%;background:radial-gradient(closest-side,rgba(174,167,249,.45),transparent)}
+  header .glow2{right:-12%;bottom:-50%;width:55%;height:140%;background:radial-gradient(closest-side,rgba(229,123,67,.35),transparent)}
+  .hero{position:relative;padding:72px 0 52px}
+  .kicker{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;padding:7px 14px;border-radius:999px;background:rgba(107,227,215,.14);color:var(--teal)}
+  .kicker span{width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  h1{font-family:var(--head);font-weight:800;letter-spacing:-.03em;line-height:.95;font-size:clamp(40px,7vw,78px);margin:20px 0 0}
+  h1 em{font-style:normal;background:linear-gradient(100deg,var(--violet),var(--orange-l) 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{max-width:620px;margin:20px 0 0;font-size:clamp(16px,1.8vw,19px);color:var(--muted)}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-size:14px;color:var(--dim)}
+  .rastro{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .rastro b{font-family:var(--head);font-weight:800;color:var(--orange-l)}
+  .chip{display:inline-flex;gap:7px;align-items:center;font-size:13px;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
+  /* arc */
+  .arc{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;align-items:center;font-size:13px;color:var(--dim)}
+  .arc .step{display:flex;align-items:center;gap:10px}
+  .arc .dot{font-weight:700;color:var(--ink);padding:6px 12px;border-radius:999px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line)}
+  .arc .arrow{color:var(--orange)}
+  /* sections */
+  main{padding:46px 0 80px}
+  .block{margin-top:40px}
+  .block-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding-bottom:4px}
+  .block-head h2{font-family:var(--head);font-weight:800;letter-spacing:-.02em;font-size:clamp(22px,3vw,30px);margin:0}
+  .block-head .q{font-size:14px;color:var(--dim)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px;margin-top:16px}
+  .card{display:flex;flex-direction:column;gap:8px;padding:20px;border-radius:18px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line);transition:transform .2s,box-shadow .2s;min-height:118px}
+  .card:hover{transform:translateY(-3px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),0 16px 36px rgba(0,0,0,.35)}
+  .card .tag{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+  .card h3{font-family:var(--head);font-weight:700;font-size:19px;margin:0;letter-spacing:-.01em}
+  .card p{margin:0;font-size:14px;color:var(--muted)}
+  .card .go{margin-top:auto;font-size:14px;font-weight:700;color:var(--orange-l)}
+  .card.ghost{background:transparent;box-shadow:inset 0 0 0 1px var(--line)}
+  .accent-teal .tag{color:var(--teal)} .accent-orange .tag{color:var(--orange-l)} .accent-blue .tag{color:#8FB8FF}
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--dim);font-size:13px}
+  .note{margin-top:14px;font-size:13px;color:var(--dim)}
+</style>
+</head>
+<body>
+<header>
+  <div class="glow1"></div><div class="glow2"></div>
+  <div class="wrap hero">
+    <span class="kicker"><span></span>Crack the Code · Colsubsidio · Grado 11</span>
+    <h1>Investigación &amp; Lanzamiento IA<br><em>Yo decido.</em></h1>
+    <p class="sub">Aprende a investigar y decidir con datos sobre tu futuro —estudies, trabajes o emprendas— usando un solo método y la IA como apoyo, nunca como quien decide por ti.</p>
+    <div class="meta"><span>📚 Bienvenida + 2 Bloques + Demo Day</span><span>🧭 Método RASTRO</span><span>🤖 Con Pixie</span></div>
+    <div class="rastro">
+      <span class="chip"><b>R</b> Redacta</span><span class="chip"><b>A</b> Abre</span><span class="chip"><b>S</b> Sigue</span><span class="chip"><b>T</b> Triangula</span><span class="chip"><b>R</b> Reescribe</span><span class="chip"><b>O</b> Organiza</span>
+    </div>
+    <div class="arc">
+      <span class="step"><span class="dot">Seguidor</span></span><span class="arrow">→</span>
+      <span class="step"><span class="dot">Investigador</span></span><span class="arrow">→</span>
+      <span class="step"><span class="dot">Creador</span></span><span class="arrow">→</span>
+      <span class="step"><span class="dot">Autor</span></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="block">
+    <div class="block-head"><h2>Bienvenida</h2><span class="q">Modo Futuro ON</span></div>
+    <div class="grid">
+      <a class="card accent-teal" href="01-bienvenida.html">
+        <span class="tag">Primera clase</span>
+        <h3>Modo Futuro ON</h3>
+        <p>Qué es el curso, el método RASTRO, Pixie, la bitácora, el portafolio de ejemplo y la foto de entrada.</p>
+        <span class="go">Abrir →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><h2>Bloque 1 · De seguidor a investigador</h2><span class="q">¿De dónde salió esto?</span></div>
+    <div class="grid">
+      <a class="card" href="02-bloque1-parte1-pregunta-y-busqueda.html">
+        <span class="tag">Parte 1 · R · A</span>
+        <h3>Pregunta y búsqueda</h3>
+        <p>Arma tu pregunta investigable (Redacta) y aprende a buscar sin dejarte engañar (Abre).</p>
+        <span class="go">Abrir →</span>
+      </a>
+      <a class="card" href="03-bloque1-parte2-sigue-y-triangula.html">
+        <span class="tag">Parte 2 · S · T</span>
+        <h3>Sigue y triangula</h3>
+        <p>Llega al origen de cada dato y evalúalo (Sigue); contrasta tus fuentes y usa un rango (Triangula).</p>
+        <span class="go">Abrir →</span>
+      </a>
+      <a class="card" href="04-bloque1-parte3-reescribe-apa-organiza.html">
+        <span class="tag">Parte 3 · R · APA · O</span>
+        <h3>Reescribe, APA y organiza</h3>
+        <p>Parafrasea con tus palabras, cita en APA 7 y ordena tus datos hasta una conclusión.</p>
+        <span class="go">Abrir →</span>
+      </a>
+      <a class="card" href="05-bloque1-parte4-informe-y-decision.html">
+        <span class="tag">Parte 4 · Laboratorio</span>
+        <h3>Informe y decisión</h3>
+        <p>Arma tu informe completo en la bitácora y pasa de tu conclusión a tu decisión.</p>
+        <span class="go">Abrir →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><h2>Bloque 2 · De investigador a creador</h2><span class="q">¿Cómo demuestro lo que sé hacer?</span></div>
+    <div class="grid">
+      <a class="card accent-orange" href="06-bloque2-parte1-evidencia-marca-cv.html">
+        <span class="tag">Parte 1</span>
+        <h3>Evidencia, marca y CV</h3>
+        <p>Tus evidencias, tu frase de marca y tu hoja de vida que funciona para el sistema y para la persona.</p>
+        <span class="go">Abrir →</span>
+      </a>
+      <a class="card accent-orange" href="07-bloque2-parte2-linkedin-carta-pitch.html">
+        <span class="tag">Parte 2</span>
+        <h3>LinkedIn, carta y pitch</h3>
+        <p>Tu perfil profesional, tu carta de presentación y tu guion de pitch (STAR) en 3 minutos.</p>
+        <span class="go">Abrir →</span>
+      </a>
+      <a class="card accent-orange" href="08-bloque2-parte3-portafolio-y-entrega.html">
+        <span class="tag">Parte 3</span>
+        <h3>Portafolio y entrega</h3>
+        <p>Publica tu portafolio, aprende correo profesional y privacidad, y haz tu entrega final.</p>
+        <span class="go">Abrir →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><h2>Demo Day · De creador a autor</h2><span class="q">¿Puedo sostenerlo frente a alguien?</span></div>
+    <div class="grid">
+      <a class="card accent-blue" href="09-demo-day.html">
+        <span class="tag">Cierre</span>
+        <h3>Demo Day</h3>
+        <p>Presentas tu informe y tu pitch ante un panel y respondes sobre tus fuentes. Yo decido.</p>
+        <span class="go">Abrir →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><h2>Material de apoyo</h2></div>
+    <div class="grid">
+      <a class="card ghost" href="portafolio-de-ejemplo.html">
+        <span class="tag">Ejemplo · datos simulados</span>
+        <h3>Portafolio de ejemplo (Valentina)</h3>
+        <p>A dónde se llega: un portafolio terminado con informe, decisión, hoja de vida y pitch.</p>
+        <span class="go">Abrir →</span>
+      </a>
+    </div>
+    <p class="note">Los materiales del curso son autocontenidos. El portafolio de ejemplo usa <code>support.js</code>, <code>colors_and_type.css</code> y <code>assets/</code>, ya incluidos en este repo.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Investigación &amp; Lanzamiento IA — Yo decido · Grado 11 · Crack the Code para Colsubsidio</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap">
+<style>
+body{margin:0;-webkit-font-smoothing:antialiased;background:#0B0B16}
+*{box-sizing:border-box}
+a{color:inherit}a:hover{opacity:.85}
+button{font-family:inherit}
+html{scroll-behavior:smooth}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes bar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes shine{from{background-position:-200% 0}to{background-position:200% 0}}
+[data-rv]{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+[data-rv].in{opacity:1;transform:none}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-30px)}}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#F7F7FB;color:#12121F;font-family:var(--font-body);overflow-x:hidden">
+
+  <div style="display:flex;justify-content:center;padding:8px 16px;background:#FFEFE7;color:#AC5734;font-size:12.5px;font-weight:600;text-align:center">Portafolio de ejemplo · Persona y datos simulados con fines educativos.</div>
+
+  <div style="position:fixed;left:0;top:0;height:3px;z-index:60;width:{{ readW }};background:linear-gradient(90deg,#AEA7F9,#E57B43)"></div>
+  <header style="position:sticky;top:0;z-index:40;background:rgba(11,11,22,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,.08)">
+    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:20px">
+      <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;white-space:nowrap"><img src="assets/valentina.jpg" alt="Valentina Ruiz" style="width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 25%;box-shadow:0 0 0 2px rgba(255,255,255,.2)"><b style="font-size:15px">Valentina Ruiz</b></a>
+      <nav style="flex:1;display:flex;justify-content:flex-end;gap:22px;font-size:14px;color:#C9CBE0;white-space:nowrap">
+        <a href="#caso" style="text-decoration:none">Caso</a><a href="#habilidades" style="text-decoration:none">Habilidades</a><a href="#pitch" style="text-decoration:none">Pitch</a>
+      </nav>
+      <a href="#contacto" style="display:flex;align-items:center;min-height:40px;padding:0 18px;border-radius:999px;background:#FFFFFF;color:#12121F;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap">Contactar</a>
+    </div>
+  </header>
+
+  <section id="top" style="position:relative;overflow:hidden;background:#0B0B16;color:#FFFFFF">
+    <div style="position:absolute;left:-10%;top:-30%;width:60%;height:120%;background:radial-gradient(closest-side,rgba(90,82,173,.55),transparent);animation:drift 16s ease-in-out infinite;pointer-events:none"></div>
+    <div style="position:absolute;right:-10%;bottom:-40%;width:55%;height:120%;background:radial-gradient(closest-side,rgba(229,123,67,.38),transparent);animation:drift 20s ease-in-out infinite reverse;pointer-events:none"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%);mask-image:radial-gradient(ellipse at 50% 30%,#000,transparent 75%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(56px,9vw,120px) 24px clamp(40px,6vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:48px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:26px;animation:up .8s both">
+        <span style="align-self:flex-start;display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;background:rgba(46,194,126,.14);color:#9FF0C6"><span style="width:8px;height:8px;border-radius:50%;background:#2EC27E;animation:pulse 1.6s infinite"></span>Hola, soy Valentina · futura enfermera</span>
+        <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(52px,8.4vw,112px);font-weight:800;line-height:.9;letter-spacing:-0.045em">Quiero cuidar personas <span style="background:linear-gradient(100deg,#AEA7F9 0%,#FFAA7D 70%);-webkit-background-clip:text;background-clip:text;color:transparent">con evidencia.</span></span>
+        <span style="font-size:clamp(17px,1.7vw,20px);line-height:1.6;color:#C9CBE0;max-width:560px">Tengo 17 años, vivo en Bogotá y quiero ser enfermera. En salud, una decisión sin datos puede costarle caro a alguien. Por eso aprendí a buscar, verificar y decidir con evidencia. Así elegí mi carrera, y así quiero trabajar.</span>
+        <div style="display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:#C9CBE0"><span>📍 Bogotá</span><span>🎓 Bachiller 2026</span><span>🗣 Español nativo · Inglés A2</span><span>🩺 Prácticas en salud desde 2027</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="#caso" style="display:flex;align-items:center;min-height:54px;padding:0 26px;border-radius:999px;background:#FFFFFF;color:#12121F;font-size:15px;font-weight:700;text-decoration:none">Ver el caso completo →</a>
+          <a href="#docs" style="display:flex;align-items:center;min-height:54px;padding:0 26px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3);font-size:15px;font-weight:700;text-decoration:none">⬇ Descargar CV</a>
+        </div>
+      </div>
+      <div style="position:relative;justify-self:center;width:100%;max-width:470px;animation:up .9s .15s both">
+        <div style="position:absolute;inset:-14px;border-radius:44px;background:linear-gradient(140deg,#AEA7F9,#1D5BBC 45%,#E57B43);opacity:.75;filter:blur(2px)"></div>
+        <div style="position:relative;aspect-ratio:4/5;border-radius:36px;overflow:hidden;background:#1A1A2E">
+          <img src="assets/valentina.jpg" alt="Valentina Ruiz" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%">
+          <div style="position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(transparent,rgba(11,11,22,.85))"></div>
+          <div style="position:absolute;left:24px;right:24px;bottom:22px;display:flex;flex-direction:column;gap:4px">
+            <b style="font-family:'Bricolage Grotesque',var(--font-body);font-size:28px;letter-spacing:-0.02em">Valentina Ruiz</b>
+            <span style="font-size:14px;color:#DDDAFF">Futura estudiante de Enfermería · Bogotá</span>
+          </div>
+        </div>
+        <div style="position:absolute;left:-22px;bottom:104px;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.96);color:#12121F;box-shadow:0 18px 40px rgba(0,0,0,.3);animation:floaty 5s ease-in-out infinite">
+          <span style="width:38px;height:38px;border-radius:12px;background:#DAF2F0;color:#153B34;display:flex;align-items:center;justify-content:center;font-weight:800">✓</span>
+          <span style="display:flex;flex-direction:column"><b style="font-size:15px">8 de 12 datos</b><span style="font-size:12px;color:#6B6E82">pasaron mi verificación</span></span>
+        </div>
+        <div style="position:absolute;right:-18px;bottom:24%;display:flex;flex-direction:column;gap:2px;padding:14px 18px;border-radius:18px;background:#12121F;box-shadow:0 18px 40px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.12);animation:floaty 6s 1s ease-in-out infinite">
+          <b style="font-family:'Bricolage Grotesque',var(--font-body);font-size:30px;line-height:1;color:#FFAA7D">70%</b>
+          <span style="font-size:12px;color:#C9CBE0;max-width:120px">empleo formal en mi carrera elegida</span>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px 40px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;border-radius:24px;overflow:hidden;background:rgba(255,255,255,.1)">
+        <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+          <div style="padding:22px 24px;background:rgba(18,18,31,.92);display:flex;flex-direction:column;gap:4px">
+            <b style="font-family:'Bricolage Grotesque',var(--font-body);font-size:46px;line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums;color:{{ k.c }}">{{ k.n }}</b>
+            <span style="font-size:13px;line-height:1.4;color:#C9CBE0">{{ k.t }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:relative;border-top:1px solid rgba(255,255,255,.08)">
+      <div style="max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;font-size:13px;color:#8F92AD">
+        <span style="font-weight:700;color:#C9CBE0">Fuentes que usé</span>
+        <span>Observatorio Laboral para la Educación</span><span>DANE · GEIH</span><span>Servicio Público de Empleo</span><span>SNIES</span><span>Google Académico</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 0">
+    <div data-rv="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;border-radius:28px;overflow:hidden;background:#E4E5EE;box-shadow:0 20px 50px rgba(18,18,31,.06)">
+      <div style="padding:32px;background:#FFFFFF;display:flex;flex-direction:column;gap:12px"><span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5A52AD">En 30 segundos</span><span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:24px;font-weight:700;line-height:1.25;letter-spacing:-0.01em">Una enfermera decide todos los días. Yo ya aprendí a hacerlo con datos.</span></div>
+      <div style="padding:32px;background:#FFFFFF;display:flex;flex-direction:column;gap:12px"><span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1D5BBC">Lo que sé hacer</span><span style="font-size:15px;line-height:1.65;color:#4A4D60">Formular preguntas investigables, buscar en fuentes oficiales, detectar datos sin respaldo, citar en APA y explicar mis conclusiones en público.</span></div>
+      <div style="padding:32px;background:#FFFFFF;display:flex;flex-direction:column;gap:12px"><span style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#AC5734">Lo que puedo aportar</span><span style="font-size:15px;line-height:1.65;color:#4A4D60">En enfermería hay que revisar antes de actuar: una dosis, un síntoma, un protocolo. Yo ya entreno ese hábito: no me quedo con lo primero que leo y pregunto de dónde sale cada dato.</span></div>
+    </div>
+  </section>
+
+  <section id="caso" data-rv="" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:flex;flex-direction:column;gap:30px">
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5A52AD">Caso de estudio</span>
+        <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(36px,5vw,64px);font-weight:800;line-height:1;letter-spacing:-0.035em">¿Enfermería o Software? Así lo resolví.</span>
+      </div>
+      <span style="font-size:14px;color:#6B6E82">12 datos · 6 fuentes · 3 rutas comparadas</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;padding:8px;border-radius:22px;background:#ECECF4">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+        <button onClick="{{ s.go }}" style="cursor:pointer;border:0;border-radius:16px;padding:14px;min-height:64px;background:{{ s.bg }};color:{{ s.fg }};box-shadow:{{ s.sh }};display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left">
+          <span style="font-size:12px;font-weight:700;opacity:.65">{{ s.n }}</span>
+          <b style="font-size:15px">{{ s.t }}</b>
+        </button>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;animation:{{ stepAnim }}">
+      <div style="padding:clamp(26px,4vw,40px);border-radius:28px;background:#12121F;color:#FFFFFF;display:flex;flex-direction:column;gap:16px">
+        <span style="font-size:13px;color:#AEA7F9;font-weight:700">{{ cur.k }}</span>
+        <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(24px,2.8vw,34px);font-weight:700;line-height:1.2">{{ cur.h }}</span>
+        <span style="font-size:15px;line-height:1.6;color:#C9CBE0">{{ cur.p }}</span>
+      </div>
+      <div style="padding:clamp(26px,4vw,40px);border-radius:28px;background:#FFFFFF;box-shadow:0 0 0 1px #E4E5EE;display:flex;flex-direction:column;gap:14px">
+        <span style="font-size:13px;color:#6B6E82;font-weight:700">{{ cur.rk }}</span>
+        <sc-for list="{{ cur.rows }}" as="r" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;justify-content:space-between;gap:12px;font-size:15px"><span>{{ r.l }}</span><b style="color:{{ r.c }}">{{ r.v }}</b></div>
+            <div style="height:10px;border-radius:6px;background:#F0F0F6;overflow:hidden"><div style="height:100%;width:{{ r.w }};border-radius:6px;background:{{ r.c }};transform-origin:left;animation:bar .9s cubic-bezier(.2,.8,.2,1) both"></div></div>
+          </div>
+        </sc-for>
+        <span style="margin-top:auto;font-size:12px;color:#8F92AD">{{ cur.src }}</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+      <div style="padding:30px;border-radius:28px;background:linear-gradient(135deg,#5A52AD,#1D5BBC);color:#FFFFFF;display:flex;flex-direction:column;gap:10px"><span style="font-size:13px;font-weight:700;opacity:.8">Lo que esto dice de mí como futura enfermera</span><span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:26px;font-weight:700;line-height:1.25">“Antes de actuar, verifico. Es lo que hice para elegir mi carrera y es lo que haré con cada paciente.”</span></div>
+      <div style="padding:30px;border-radius:28px;background:#FFFFFF;box-shadow:0 0 0 1px #E4E5EE;display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;color:#8F92AD">Antes de investigar creía</span><span style="font-size:15px;line-height:1.5">“Software gana en todo: paga más y hay más trabajo.”</span></div>
+        <div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:12px;font-weight:700;color:#153B34">Lo que encontré</span><span style="font-size:15px;line-height:1.5">“Paga más, sí. Pero para quien empieza, Enfermería contrata antes.”</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;line-height:1.6;color:#6B6E82"><b style="color:#12121F">Referencias (APA)</b><span>Ministerio de Educación Nacional. (2023). <i>Observatorio Laboral para la Educación</i> [Base de datos].</span><span>Departamento Administrativo Nacional de Estadística. (2024). <i>Gran Encuesta Integrada de Hogares</i>.</span><span>Servicio Público de Empleo. (2025). <i>Vacantes para recién egresados</i>.</span></div>
+  </section>
+
+  <section style="max-width:1200px;margin:0 auto;padding:0 24px clamp(64px,9vw,120px);display:flex;flex-direction:column;gap:30px">
+    <div data-rv="" style="display:flex;flex-direction:column;gap:12px;max-width:760px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#153B34">De mi caso a la enfermería</span>
+      <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.02;letter-spacing:-0.035em">Lo que aprendí es lo que hace una enfermera.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px">
+      <sc-for list="{{ nurse }}" as="n" hint-placeholder-count="4">
+        <div data-rv="" style="padding:26px;border-radius:24px;background:#FFFFFF;box-shadow:0 0 0 1px #E4E5EE;display:flex;flex-direction:column;gap:14px;transition-delay:{{ n.d }}">
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:700;color:#8F92AD">En mi investigación</span><span style="font-size:15px;line-height:1.5">{{ n.a }}</span></div>
+          <span style="height:1px;background:#ECEEF3"></span>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:12px;font-weight:700;color:#153B34">En enfermería</span><b style="font-size:16px;line-height:1.45">{{ n.b }}</b></div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="docs" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:flex;flex-direction:column;gap:32px">
+    <div data-rv="" style="display:flex;flex-direction:column;gap:12px;max-width:720px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1D5BBC">Para llevar</span>
+      <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.02;letter-spacing:-0.035em">Mi informe y mi hoja de vida.</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:22px">
+      <sc-for list="{{ docs }}" as="d" hint-placeholder-count="2">
+        <div data-rv="" style="display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;padding:24px;border-radius:28px;background:#FFFFFF;box-shadow:0 0 0 1px #E4E5EE;transition:box-shadow .25s,transform .25s" style-hover="box-shadow:0 24px 50px rgba(18,18,31,.12),0 0 0 1px #E4E5EE;transform:translateY(-4px)">
+          <div style="aspect-ratio:3/4;border-radius:12px;background:#FFFFFF;box-shadow:0 10px 26px rgba(18,18,31,.14),0 0 0 1px #ECEEF3;padding:14px 12px;display:flex;flex-direction:column;gap:7px;transform:rotate(-3deg)">
+            <span style="height:22px;border-radius:5px;background:{{ d.c }}"></span>
+            <span style="height:6px;width:80%;border-radius:3px;background:#DEE2E6"></span>
+            <span style="height:6px;width:65%;border-radius:3px;background:#DEE2E6"></span>
+            <span style="height:34px;margin-top:4px;border-radius:5px;background:{{ d.c2 }}"></span>
+            <span style="height:6px;width:90%;border-radius:3px;background:#E9ECEF"></span>
+            <span style="height:6px;width:72%;border-radius:3px;background:#E9ECEF"></span>
+            <span style="height:6px;width:84%;border-radius:3px;background:#E9ECEF"></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font-size:12px;font-weight:700;color:#8F92AD">{{ d.m }}</span>
+            <b style="font-family:'Bricolage Grotesque',var(--font-body);font-size:24px;line-height:1.15;letter-spacing:-0.01em">{{ d.t }}</b>
+            <span style="font-size:14px;line-height:1.55;color:#4A4D60">{{ d.s }}</span>
+            <button onClick="{{ d.go }}" style="align-self:flex-start;min-height:44px;padding:0 20px;border:0;border-radius:999px;background:#12121F;color:#FFFFFF;font-size:14px;font-weight:700;cursor:pointer">{{ d.b }}</button>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="habilidades" style="background:#FFFFFF;border-top:1px solid #E4E5EE;border-bottom:1px solid #E4E5EE">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#5A52AD">Habilidades demostradas</span>
+        <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.02;letter-spacing:-0.035em">Cada habilidad, con su evidencia.</span>
+        <span style="font-size:16px;line-height:1.65;color:#4A4D60">No son adjetivos. Cada una está respaldada por algo que hice durante el curso.</span>
+      </div>
+      <div style="display:flex;flex-direction:column;border-radius:24px;box-shadow:0 0 0 1px #E4E5EE;overflow:hidden">
+        <sc-for list="{{ skills }}" as="s" hint-placeholder-count="5">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px;padding:18px 22px;border-top:1px solid #F0F0F6">
+            <b style="font-size:15px">{{ s.t }}</b>
+            <span style="font-size:14px;line-height:1.5;color:#4A4D60">{{ s.e }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="pitch" data-rv="" style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,120px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:28px;align-items:center">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#AC5734">Mi pitch</span>
+      <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(32px,4.4vw,52px);font-weight:800;line-height:1.02;letter-spacing:-0.035em">Mi decisión en dos minutos.</span>
+      <span style="font-size:16px;line-height:1.65;color:#4A4D60">Qué decidí, por qué y de dónde salen mis datos. Si me preguntas “¿de dónde sacaste eso?”, tengo la respuesta.</span>
+      
+    </div>
+    <div style="position:relative;aspect-ratio:16/10;border-radius:28px;overflow:hidden;background:#12121F;box-shadow:0 30px 70px rgba(18,18,31,.25)">
+            <img src="assets/valentina.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transform:scale({{ camZ }});transition:transform 1s linear">
+      <div style="position:absolute;inset:0;background:linear-gradient(transparent 50%,rgba(11,11,22,.7))"></div>
+      <span style="position:absolute;left:18px;top:16px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(0,0,0,.4);color:#FFFFFF"><span style="width:8px;height:8px;border-radius:50%;background:#FF5A5A;animation:{{ recAnim }}"></span>Pitch · 2 min · simulado</span>
+      <sc-if value="{{ paused }}" hint-placeholder-val="{{ true }}">
+        <button onClick="{{ play }}" title="Reproducir" style="position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border:0;border-radius:50%;background:#FFFFFF;color:#12121F;font-size:28px;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.3);padding-left:6px">▶</button>
+      </sc-if>
+      <sc-if value="{{ playingOrStarted }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:0;right:0;bottom:60px;display:flex;justify-content:center;padding:0 20px"><span style="max-width:640px;padding:9px 16px;border-radius:12px;background:rgba(0,0,0,.6);color:#FFFFFF;font-size:clamp(13px,1.6vw,18px);line-height:1.4;text-align:center">{{ sub }}</span></div></sc-if>
+      <div style="position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:center;gap:12px;color:#FFFFFF">
+        <button onClick="{{ toggle }}" title="Reproducir o pausar" style="flex:none;width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.18);color:#FFFFFF;font-size:12px;cursor:pointer">{{ icon }}</button>
+        <div style="flex:1;height:5px;border-radius:4px;background:rgba(255,255,255,.25);overflow:hidden"><div style="height:100%;width:{{ progW }};background:#FFFFFF"></div></div>
+        <span style="flex:none;font-size:12px;font-variant-numeric:tabular-nums">{{ clock }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="background:#0B0B16;color:#FFFFFF">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,110px) 24px;display:flex;flex-direction:column;gap:24px;align-items:flex-start">
+      <span style="display:flex;align-items:center;gap:14px"><img src="assets/valentina.jpg" alt="" style="width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 25%;box-shadow:0 0 0 3px #E57B43"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#AEA7F9">Contacto</span></span>
+      <span style="font-family:'Bricolage Grotesque',var(--font-body);font-size:clamp(36px,6vw,76px);font-weight:800;line-height:.98;letter-spacing:-0.04em;max-width:900px">¿Buscas a alguien que cuide y verifique antes de decidir?</span>
+      <a href="mailto:valentina.ruiz@correo.co" style="display:flex;align-items:center;gap:12px;min-height:60px;padding:0 28px;border-radius:999px;background:#FFFFFF;color:#12121F;font-size:clamp(16px,2vw,20px);font-weight:700;text-decoration:none">✉ valentina.ruiz@correo.co</a>
+      <span style="font-size:13px;color:#8F92AD">Bogotá, Colombia · Disponible para prácticas desde 2027</span>
+      <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}"><span style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:70;padding:14px 22px;border-radius:999px;background:#FFFFFF;color:#12121F;font-size:14px;font-weight:700;box-shadow:0 18px 40px rgba(0,0,0,.3)">{{ toast }}</span></sc-if>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08)"><div style="max-width:1200px;margin:0 auto;padding:20px 24px;font-size:12px;color:#8F92AD">Hecho en el curso Yo decido · Crack the Code · Portafolio de ejemplo</div></div>
+  </section>
+</div>
+<template id="__bundler_thumbnail" data-bg-color="#0B0B16"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0B0B16"></rect><text x="50" y="62" text-anchor="middle" font-family="Arial" font-weight="700" font-size="30" fill="#FFAA7D">VR</text></svg></template>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const STEPS = [
+  { t: 'Pregunta', k: 'Mi pregunta de investigación', h: 'Entre Enfermería y Desarrollo de Software, ¿cuál contrata más rápido a recién graduados de Bogotá entre 2022 y 2025?', p: 'Empecé con “¿qué estudio?”, que no se responde con datos. La reescribí con tres piezas: a quiénes, dónde y en qué periodo.', rk: 'Las tres piezas', rows: [['a quiénes', 'recién graduados', 100, '#5A52AD'], ['dónde', 'Bogotá', 100, '#E57B43'], ['periodo', '2022–2025', 100, '#2EA39A']], src: 'Revisada con Pixie: a la primera versión le faltaba el periodo.' },
+  { t: 'Búsqueda', k: 'Lo que busqué', h: 'Doce datos candidatos en seis fuentes.', p: 'Busqué en Perplexity y Google Académico, y fui siempre a la fuente original: Observatorio Laboral, DANE y Servicio Público de Empleo.', rk: 'De dónde salieron mis datos', rows: [['Fuentes oficiales', '8 datos', 67, '#1D5BBC'], ['Artículos académicos', '2 datos', 17, '#5A52AD'], ['Blogs y redes', '2 datos', 17, '#ADB5BD']], src: 'Los de blogs y redes se descartaron en la verificación.' },
+  { t: 'Verificación', k: 'Cómo verifiqué', h: 'Sobrevivieron 8 de 12 datos.', p: 'A cada dato le pedí tres cosas: quién lo midió, cuándo y a quiénes. Si le faltaba una, no entraba al informe.', rk: 'Resultado de la verificación', rows: [['Con fuente, año y población', '8', 67, '#2EA39A'], ['Sin año', '2', 17, '#E57B43'], ['Sin fuente', '2', 17, '#C0392B']], src: 'Incluye dos datos que me dio una IA sin decir de qué año eran.' },
+  { t: 'Hallazgos', k: 'Lo que encontré', h: 'Enfermería contrata antes. Software paga más.', p: 'Para quien empieza, el primer empleo llega antes en Enfermería. Software ofrece un primer sueldo más alto, pero tarda más en contratar.', rk: 'Empleo formal al año de graduarse · Bogotá', rows: [['Enfermería', '70%', 70, '#5A52AD'], ['Desarrollo de Software', '60%', 60, '#E57B43'], ['Diseño Gráfico', '48%', 48, '#ADB5BD']], src: 'Observatorio Laboral para la Educación · 2023 · datos ilustrativos' },
+  { t: 'Decisión', k: 'Cómo decidí', h: 'Elegí la que responde a lo que yo necesito.', p: 'Mi criterio fue empezar a trabajar pronto. Con ese criterio, los datos apuntan a Enfermería. Si mi criterio fuera el sueldo, elegiría distinto, y eso también está bien.', rk: 'Peso de cada criterio en mi decisión', rows: [['Conseguir empleo rápido', 'Alta', 90, '#5A52AD'], ['Me importa el tema', 'Alta', 80, '#1D5BBC'], ['Sueldo inicial', 'Media', 45, '#E57B43']], src: 'La decisión es mía; los datos la respaldan.' },
+];
+const SUBS = [[0, 'Hola, soy Valentina. Un test me dijo qué estudiar con 94% de compatibilidad.'], [7, 'No le creí. Me hice una pregunta que sí se podía investigar.'], [14, 'Comparé Enfermería y Software con datos del Observatorio Laboral.'], [21, 'Enfermería contrata antes a quien empieza. Software paga más.'], [28, 'Decidí Enfermería porque necesito trabajar pronto.'], [34, 'Y si me preguntas de dónde lo saqué, aquí están mis fuentes.']];
+const DUR = 40;
+class Component extends DCLogic {
+  state = { step: 0, k: 0, t: 0, playing: false, cnt: 0, read: 0, toast: '' };
+  componentDidMount() {
+    const st = performance.now();
+    const tick = (n) => { const p = Math.min(1, (n - st) / 1600); this.setState({ cnt: 1 - Math.pow(1 - p, 3) }); if (p < 1) this.raf = requestAnimationFrame(tick); };
+    this.raf = requestAnimationFrame(tick);
+    this.io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); this.io.unobserve(e.target); } }), { threshold: 0.12 });
+    const scan = () => document.querySelectorAll('[data-rv]:not(.in)').forEach(el => this.io.observe(el));
+    scan(); this.scanT = setInterval(scan, 800);
+    this.onScroll = () => { const d = document.documentElement; this.setState({ read: d.scrollTop / Math.max(1, d.scrollHeight - d.clientHeight) }); };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+  flash(t) { clearTimeout(this.tt); this.setState({ toast: t }); this.tt = setTimeout(() => this.setState({ toast: '' }), 2600); }
+  componentWillUnmount() { clearInterval(this.iv); clearInterval(this.scanT); cancelAnimationFrame(this.raf); this.io && this.io.disconnect(); window.removeEventListener('scroll', this.onScroll); }
+  setPlay(on) {
+    clearInterval(this.iv);
+    if (on) this.iv = setInterval(() => this.setState(s => { const t = s.t + 0.25; return t >= DUR ? { t: DUR, playing: false } : { t }; }), 250);
+    this.setState(s => ({ playing: on, t: on && s.t >= DUR ? 0 : s.t }));
+  }
+  renderVals() {
+    const s = this.state, c = STEPS[s.step];
+    const sub = [...SUBS].reverse().find(x => s.t >= x[0]) || SUBS[0];
+    const sec = Math.floor(s.t);
+    return {
+      kpis: [[3, '', 'rutas de futuro comparadas', '#FFFFFF'], [12, '', 'datos revisados', '#AEA7F9'], [6, '', 'fuentes consultadas', '#6BE3D7'], [8, '', 'datos verificados', '#FFAA7D']].map(([n, u, t, c]) => ({ n: Math.round(n * s.cnt) + u, t, c })),
+      readW: (s.read * 100) + '%',
+      nurse: [['Revisé si cada dato tenía fuente, año y a quiénes midió.', 'Confirmar la fuente de una indicación antes de aplicarla.'], ['Descarté 4 datos que sonaban seguros pero no tenían respaldo.', 'No actuar por un rumor o un “siempre se ha hecho así”.'], ['Usé la IA para saber qué me faltaba, no para decidir.', 'Usar la tecnología como apoyo, con criterio propio.'], ['Expliqué mi conclusión y de dónde salía cada número.', 'Comunicar con claridad a pacientes, familias y equipo.']].map(([a, b], i) => ({ a, b, d: (i * 0.08) + 's' })),
+      toast: s.toast,
+      camZ: s.playing ? 1.08 : 1,
+      weeks: [['Elegir', 'Mi pregunta con las tres piezas'], ['Buscar', '12 datos candidatos'], ['Verificar', '8 fuentes confirmadas'], ['Concluir', 'Mi informe de hallazgos'], ['Decidir', 'Mi decisión con criterios'], ['Presentarme', 'Mi perfil y hoja de vida'], ['Convencer', 'Carta de motivación'], ['Contarlo', 'Mi pitch en video'], ['Publicar', 'Este portafolio']].map(([v, o], i) => ({ n: i + 1, v, o, c: ['#AEA7F9', '#BFE1FC', '#6BE3D7', '#FFAA7D'][i % 4], d: (i * 0.06) + 's' })),
+      docs: [{ m: 'PDF · 6 páginas', t: 'Informe: ¿Enfermería o Software?', s: 'Pregunta, método, 8 fuentes verificadas, hallazgos y conclusión, con referencias APA.', b: '⬇ Descargar informe', c: '#5A52AD', c2: '#DDDAFF', go: () => this.flash('Ejemplo: en el portafolio real aquí se descarga el informe.') }, { m: 'PDF · 1 página', t: 'Hoja de vida', s: 'Formación, habilidades con evidencia, experiencia cuidando a un familiar y contacto.', b: '⬇ Descargar CV', c: '#E57B43', c2: '#FFEFE7', go: () => this.flash('Ejemplo: en el portafolio real aquí se descarga la hoja de vida.') }],
+      steps: STEPS.map((x, i) => ({ n: String(i + 1).padStart(2, '0'), t: x.t, bg: i === s.step ? '#12121F' : 'transparent', fg: i === s.step ? '#FFFFFF' : '#4A4D60', sh: i === s.step ? '0 8px 20px rgba(18,18,31,.18)' : 'none', go: () => this.setState(y => ({ step: i, k: y.k + 1 })) })),
+      cur: { ...c, rows: c.rows.map(([l, v, w, col]) => ({ l, v, w: w + '%', c: col })) },
+      stepAnim: (s.k % 2 ? 'up' : 'up') + ' .45s both',
+      skills: [['Investigación', 'Formulé una pregunta con las tres piezas y la investigué durante todo el curso.'], ['Pensamiento crítico', 'Descarté 4 de 12 datos porque no decían quién los midió, cuándo o a quiénes.'], ['Uso responsable de IA', 'Usé la IA para saber qué me faltaba, nunca para decidir por mí.'], ['Lectura de datos', 'Comparé empleo y sueldo de tres carreras con fuentes oficiales.'], ['Escritura académica', 'Cité todas mis fuentes en APA.'], ['Comunicación', 'Expliqué mi decisión en un pitch de dos minutos.']].map(([t, e]) => ({ t, e })),
+      paused: !s.playing, playingOrStarted: s.playing, play: () => this.setPlay(true), toggle: () => this.setPlay(!s.playing), icon: s.playing ? '❚❚' : '▶',
+      sub: s.playing || s.t > 0 ? sub[1] : 'Toca ▶ para ver el pitch (simulado)',
+      progW: (s.t / DUR * 100) + '%', clock: '0:' + String(sec).padStart(2, '0') + ' / 0:' + DUR,
+      recAnim: s.playing ? 'pulse 1s infinite' : 'none',
+    };
+  }
+}
+</script>
+</body>
+</html>
